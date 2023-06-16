@@ -1,13 +1,14 @@
 // shortcut rce
+import { paste } from "@testing-library/user-event/dist/paste";
 import React, { Component } from "react";
 
 export class NewsItem extends Component {
   render() {
-    let { title, description, imageUrl, newsUrl, author, date,source } = this.props;
+    let { title, description, imageUrl, newsUrl, author, date, source } =
+      this.props;
     return (
       <div className="my-3">
         <div className="card-img-top card newsbox">
-        
           <img
             className="newsImg"
             src={
@@ -18,19 +19,20 @@ export class NewsItem extends Component {
             alt="..."
           />
           <div className="card-body">
-            <h5 className="card-title">
-              {title}
-              
-            </h5>
-            <p className="card-text">{description}...</p>
-            <a className="badge rounded-pill bg-warning z-1 no-decoration" href={newsUrl} style={{}}>
-                {source}
-              </a>
+            <h5 className="card-title newsTitle">{title}</h5>
+            <p className="card-text newsDescription">{description}...</p>
+            <a
+              className="badge rounded-pill bg-warning z-1 no-decoration"
+              href={newsUrl}
+              target="_blank"
+            >
+              {source}
+            </a>
             <p className="card-text">
               <small>
                 By {!author ? "Unknown" : author} on{" "}
                 {new Date(date).toGMTString()}
-              </small>
+              </small>{" "}
             </p>
             <a
               rel="noreferrer"

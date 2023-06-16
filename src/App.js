@@ -1,20 +1,18 @@
 import "./App.css";
-
 import React, { Component } from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+// npm install react-router-dom
+import { BrowserRouter, Route, Routes } from "react-router-dom";//agar Link use kr rhe hote to curly brackets me Link bhi dalna padta
 import NavBar from "./components/NavBar";
 import News from "./components/News";
-
 export default class App extends Component {
   pageSize = 15;
-  country = "us";
+  country = "in";
   render() {
     return (
-      <BrowserRouter>
-        <div>
-          <NavBar />
+      <div>
+          <BrowserRouter>
+          <NavBar/>
           <Routes>
-            {/* <Route path="/" element={<NavBar/>}/> */}
             <Route
               path="/"
               element={
@@ -93,8 +91,8 @@ export default class App extends Component {
               }
             />
           </Routes>
-        </div>
       </BrowserRouter>
+        // </div>
     );
   }
 }
