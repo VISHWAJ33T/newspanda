@@ -1,0 +1,59 @@
+:root {
+    /* Dark Mode: */
+
+    --primary: #1A1A1A;
+    /* (Very dark gray) */
+    --secondary: #222222;
+    /* (Dark gray) */
+    --primary-txt: #FFFFFF;
+    /* (White) */
+    --secondary-txt: #CCCCCC;
+    /* (Light gray) */
+    --accent: #FFC107;
+    /* (Amber) */
+
+    /* Light Mode: */
+
+    --primary: #FFFFFF;
+    /* (White) */
+    --secondary: #F4F4F4;
+    /* (Light gray) */
+    --primary-txt: #1A1A1A;
+    /* (Very dark gray) */
+    --secondary-txt: #666666;
+    /* (Medium gray) */
+    --accent: #FFC107;
+    /* (Amber) */
+}
+
+a{
+    text-decoration: none;
+}
+
+body{
+    background: #12343b;
+    color:white;
+}
+
+.spinner {
+    /* filter: invert(1); */
+    width: 700px;
+}
+
+.newsbox {
+    min-height: 500px;
+    max-height: 500px;
+    background:#2d545e ;
+    color:white;
+}
+
+.readmorebtn{
+    background: #e1b382;
+}
+
+.newsImg {
+    object-fit: cover;
+    /* min-height: 200px; */
+    max-height: 200px;
+    overflow: hidden;
+}
