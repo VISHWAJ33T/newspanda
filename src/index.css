@@ -2,36 +2,49 @@
 a {
     text-decoration: none;
 }
-
 body {
     background: #12343b;
     color: white;
 }
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+    display: none;
+}
+/* Hide scrollbar for IE, Edge and Firefox */
+body {
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+}
 
 
 .spinner {
-    width: 700px;
+    width: 100px;
 }
 
 
 .newsbox {
-    min-height: 500px;
-    max-height: 500px;
+    min-height: 600px;
+    max-height: 600px;
     background: #2d545e;
     color: white;
     /* white-space: nowrap; */
     overflow: hidden;
     text-overflow: ellipsis;
 }
+
 .newsbox:hover {
-    color: white;
-    background-color: black;
-    box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 20px 2px #00d7c3;
+    transform: translateY(-5px);
+    transition: 0.4s;
+    /* color: white; */
+    /* background-color: black; */
+    box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 10px 2px #00d7c3;
     border: 3px solid #00d7c3;
-    transform: scale(1.03);
-    transition: 1s;
-    background-position: 100%;
-    z-index: 2;
+    /* transform: scale(1.03); */
+    /* transition: 1s; */
+    /* background-position: 100%; */
+    /* z-index: 2; */
 }
 
 
@@ -44,26 +57,17 @@ body {
 
 
 .newsTitle {
-    max-height: 45px;
-    min-height: 45px;
-    overflow: auto;
-}
-/* Hide scrollbar for Chrome, Safari and Opera */
-.newsTitle::-webkit-scrollbar {
-    display: none;
-}
-/* Hide scrollbar for IE, Edge and Firefox */
-.newsTitle {
-    -ms-overflow-style: none;
-    /* IE and Edge */
-    scrollbar-width: none;
-    /* Firefox */
+    max-height: 100px;
+    min-height: 100px;
+    overflow: clip;
+    text-overflow: ellipsis;
 }
 
 .newsDescription {
-    max-height: 80px;
-    min-height: 80px;
-    overflow: auto;
+    max-height: 100px;
+    min-height: 100px;
+    overflow: clip;
+    text-overflow: ellipsis;
 }
 .newsDescription::-webkit-scrollbar {
     display: none;
@@ -74,6 +78,10 @@ body {
 }
 
 
+.newsAuthor{
+    max-height: 20px;
+    min-height: 40px;
+}
 
 .btn {
     background-color: #0e292f;

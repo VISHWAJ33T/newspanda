@@ -1,11 +1,11 @@
 // shortcut rcep
 import React, { Component} from "react";
 import { Link } from "react-router-dom";
-export class NavBar extends Component {
-  render() {
+
+const NavBar = (props)=>{
     return (
       <div>
-        <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+        <nav className="navbar fixed-top navbar-expand-lg navbar-dark bg-dark">
           <div className="container-fluid">
             <Link className="navbar-brand" to="#">
               NewsPanda
@@ -67,7 +67,5 @@ export class NavBar extends Component {
         </nav>
       </div>
     );
-  }
-}
-
+    }
 export default NavBar;
