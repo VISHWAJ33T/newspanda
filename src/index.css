@@ -1,15 +1,19 @@
 /* ****************************************Dark mode**************************************** */
+
 a {
     text-decoration: none;
 }
+
 body {
     background: #12343b;
     color: white;
 }
+
 /* Hide scrollbar for Chrome, Safari and Opera */
 body::-webkit-scrollbar {
     display: none;
 }
+
 /* Hide scrollbar for IE, Edge and Firefox */
 body {
     -ms-overflow-style: none;
@@ -17,7 +21,6 @@ body {
     scrollbar-width: none;
     /* Firefox */
 }
-
 
 .spinner {
     width: 100px;
@@ -69,16 +72,17 @@ body {
     overflow: clip;
     text-overflow: ellipsis;
 }
+
 .newsDescription::-webkit-scrollbar {
     display: none;
 }
+
 .newsDescription {
     -ms-overflow-style: none;
     scrollbar-width: none;
 }
 
-
-.newsAuthor{
+.newsAuthor {
     max-height: 20px;
     min-height: 40px;
 }
@@ -96,31 +100,89 @@ body {
 
 
 
+/* TOGGLE MODE BTN */
+.toggle-mode {
+
+    cursor: pointer;
+}
+
+.switchWrap {
+    width: 60px;
+    /* width: 30px; */
+    display: flex;
+    align-items: center;
+    height: 34px;
+    background-color: #262626;
+    border: 2px solid #494949;
+    border-radius: 30px;
+    transition: all 0.5s;
+}
+
+.switchWrap.lightMode {
+    background-color: #E9E9E9;
+    border-color: #C9C9C9;
+}
+
+.switchBtn {
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.switchBtn:focus {
+    outline: none;
+}
+
+.switchBtn.lightMode {
+    transform: translateX(30px) rotate(180deg);
+    /* transform: rotate(180deg); */
+}
+
+.switchBtn svg {
+    width: 30px;
+    height: 30px;
+}
+
+.credit {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    padding: 5px;
+}
+
 /* ****************************************Light mode**************************************** */
-/* body {
-    background: #61bece;
+.lightMode .news-body {
+    background: #9ac5cc;
     color: #002b33;
 }
 
-.bg-dark{
+.lightMode .bg-dark {
     background-color: #2f9bae;
-    color:black;
+    color: black;
 }
 
-.newsbox {
+.lightMode .newsbox {
     background: #b0e0e6;
     color: black;
 }
-.newsbox:hover{
+
+.lightMode .newsbox:hover {
     color: black;
-    background-color:white ;
+    background-color: #90ced7;
+    box-shadow: 0 0 10px 0 #95e4dc inset, 0 0 10px 2px #95e4dc;
+    border: 3px solid #95e4dc;
 }
 
-.btn{
-    background-color:#00d7c3;
-    color:black;
+.lightMode .btn {
+    background-color: #00d7c3;
+    color: black;
 }
-.btn:hover{
-    background-color:#0a6157;
-    color:white;
-} */
+
+.lightMode .btn:hover {
+    background-color: #0a6157;
+    color: white;
+}

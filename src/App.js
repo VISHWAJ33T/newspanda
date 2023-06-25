@@ -6,13 +6,15 @@ import NavBar from "./components/NavBar";
 import News from "./components/News";
 // npm install --save react-top-loading-bar
 import LoadingBar from "react-top-loading-bar";
-const App = () => {
+
+const App = (props) => {
   const [progress, setProgress] = useState(0);
   const pageSize = 15;
   const country = "in";
   const apiKey = process.env.REACT_APP_NEWS_API_KEY;
+  
   return (
-    <div>
+    <div className='news-body'>
       <BrowserRouter>
         <NavBar />
         <LoadingBar color="#00d7c3" progress={progress} height={3} />
