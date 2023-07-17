@@ -5,29 +5,28 @@ import { BrowserRouter, Route, Routes } from "react-router-dom"; //agar Link use
 import NavBar from "./components/NavBar";
 import News from "./components/News";
 // npm install --save react-top-loading-bar
-import LoadingBar from "react-top-loading-bar";
+// import LoadingBar from "react-top-loading-bar";
 
 const App = (props) => {
   const [progress, setProgress] = useState(0);
-  const pageSize = 15;
-  const country = "in";
-  const apiKey = process.env.REACT_APP_NEWS_API_KEY;
-  
+  // const pageSize = 15;
+  // const country = "in";
+  // const apiKey = process.env.REACT_APP_NEWS_API_KEY;
   return (
     <div className='news-body'>
       <BrowserRouter>
         <NavBar />
-        <LoadingBar color="#00d7c3" progress={progress} height={3} />
+        {/* <LoadingBar color="#00d7c3" progress={progress} height={3} /> */}
         <Routes>
           <Route
             path="/"
             element={
               <News
                 setProgress={setProgress}
-                apiKey={apiKey}
+                // apiKey={apiKey}
                 key="general"
-                pageSize={pageSize}
-                country={country}
+                // pageSize={pageSize}
+                // country={country}
                 category="general"
               />
             }
@@ -37,10 +36,10 @@ const App = (props) => {
             element={
               <News
                 setProgress={setProgress}
-                apiKey={apiKey}
+                // apiKey={apiKey}
                 key="business"
-                pageSize={pageSize}
-                country={country}
+                // pageSize={pageSize}
+                // country={country}
                 category="business"
               />
             }
@@ -50,9 +49,9 @@ const App = (props) => {
             element={
               <News
                 setProgress={setProgress}
-                apiKey={apiKey}
-                pageSize={pageSize}
-                country={country}
+                // apiKey={apiKey}
+                // pageSize={pageSize}
+                // country={country}
                 key="entertainment"
                 category="entertainment"
               />
@@ -63,9 +62,9 @@ const App = (props) => {
             element={
               <News
                 setProgress={setProgress}
-                apiKey={apiKey}
-                pageSize={pageSize}
-                country={country}
+                // apiKey={apiKey}
+                // pageSize={pageSize}
+                // country={country}
                 key="health"
                 category="health"
               />
@@ -76,9 +75,9 @@ const App = (props) => {
             element={
               <News
                 setProgress={setProgress}
-                apiKey={apiKey}
-                pageSize={pageSize}
-                country={country}
+                // apiKey={apiKey}
+                // pageSize={pageSize}
+                // country={country}
                 key="science"
                 category="science"
               />
@@ -89,9 +88,9 @@ const App = (props) => {
             element={
               <News
                 setProgress={setProgress}
-                apiKey={apiKey}
-                pageSize={pageSize}
-                country={country}
+                // apiKey={apiKey}
+                // pageSize={pageSize}
+                // country={country}
                 key="sports"
                 category="sports"
               />
@@ -102,9 +101,9 @@ const App = (props) => {
             element={
               <News
                 setProgress={setProgress}
-                apiKey={apiKey}
-                pageSize={pageSize}
-                country={country}
+                // apiKey={apiKey}
+                // pageSize={pageSize}
+                // country={country}
                 key="technology"
                 category="technology"
               />

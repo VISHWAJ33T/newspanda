@@ -2,8 +2,8 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { ReactSVG } from "react-svg";
+import NewsPanda from "./NewsPanda.png";
 import YingYang from "./YinYang.svg";
-
 const NavBar = () => {
   const [mode, setMode] = useState("dark");
   useEffect(() => {
@@ -38,11 +38,12 @@ const NavBar = () => {
         className={`navbar fixed-top navbar-expand-lg navbar-${mode} bg-${mode}`}
       >
         <div className="container-fluid">
-          <Link className="navbar-brand text-bold" to="#">
-            NewsPanda
+          <Link className="navbar-brand text-bold mx-2 my-0" to="/">
+            <img src={NewsPanda} height="40px" />
           </Link>
+            <h2 className="mx-2 "><b>NewsPanda</b></h2>
           <button
-            className="navbar-toggler border-none"
+            className="navbar-toggler "
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarSupportedContent"
@@ -53,7 +54,7 @@ const NavBar = () => {
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+            <ul className="navbar-nav  me-auto mb-2 px-2 mb-lg-0">
               <li className="nav-item">
                 <Link className="nav-link" aria-current="page" to="/">
                   Home
@@ -90,10 +91,10 @@ const NavBar = () => {
                 </Link>
               </li>
             </ul>
-            <div className="toggle-mode d-flex align-items-center">
+            <div className="toggle-mode d-flex align-items-center toggleMode">
               {/* <span className="mx-2">Mode:</span> */}
-              <div className="switchWrap">
-                <button className="switchBtn">
+              <div className="switchWrap mx-1">
+                <button className="switchBtn ">
                   <ReactSVG src={YingYang} />
                   {/* <YingYang/> */}
                 </button>
