@@ -60,7 +60,7 @@ const News = (props) => {
   // };
 
   return (
-    <div className="container  pt-4 news-container">
+    <div className="container  pt-1 pb-4 news-container">
       <h2 className="text-center">
         <strong>
           {/* NewsPanda -  */}
@@ -74,11 +74,11 @@ const News = (props) => {
         hasMore={articles.length !== totalResults}
         loader={<Spinner />}
       > */}
-      <div className=" items-container">
+      <div className="items-container">
         <div className="row row-container">
           {Articles[props.category].map((element) => {
             return (
-              <div className="col-lg-4" key={element.url}>
+              <div className="col-lg-4" height="fit-content" key={element.url}>
                 {props.setProgress(10) && setLoading(true)}
                 <NewsItem
                   title={element.title ? element.title : "No title"}

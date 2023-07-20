@@ -23,7 +23,7 @@ const NewsItem = (props) => {
           <h5 className="card-title newsTitle">{title}</h5>
           <p className="card-text newsDescription">{description}</p>
           <a
-            className="badge source rounded-pill bg-warning z-1 no-decoration"
+            className="badge source p-2 pill bg-warning z-1 no-decoration"
             href={newsUrl}
             target="_blank"
           >

@@ -5,7 +5,7 @@ a {
 }
 
 body {
-    background: #12343b;
+    background: #0e0e0e;
     color: white;
 }
 
@@ -22,6 +22,7 @@ body {
     /* Firefox */
 }
 
+
 .navbar-toggler:focus,
 .navbar-toggler:active,
 .navbar-toggler-icon:focus {
@@ -37,7 +38,8 @@ body {
 }
 
 .news-container {
-    margin-top:50px;
+    margin-top:80px;
+    /* height: min-content; */
     min-width: 96vw;
     display: flex;
     flex-direction: column;
@@ -48,8 +50,10 @@ body {
 .newsbox {
     min-width: 30vw;
     max-height: 600px;
+    height: 600px;
     max-height: fit-content;
     background: #2d545e;
+    background: #212529;
     color: white;
     /* white-space: nowrap; */
     overflow: hidden;
@@ -57,14 +61,15 @@ body {
 }
 
 .newsbox:hover {
+    /* transform: translateX(-2px); */
     transform: translateY(-5px);
-    transition: 0.4s;
+    transition: 0.7s;
     /* color: white; */
     /* background-color: black; */
-    box-shadow: 0 0 10px 0 #00d7c3 inset, 0 0 10px 2px #00d7c3;
-    border: 3px solid #00d7c3;
+    box-shadow:  5px 7px 7px 0px #ffffff3f;
+    /* border: 3px solid #ffffff; */
     /* transform: scale(1.03); */
-    /* transition: 1s; */
+    /* transition: 0.3s; */
     /* background-position: 100%; */
     /* z-index: 2; */
 }
@@ -72,22 +77,22 @@ body {
 
 .newsImg {
     object-fit: cover;
-    min-height: 200px;
-    max-height: 200px;
+    /* min-height: 200px; */
+    /* max-height: 200px; */
     overflow: hidden;
 }
 
 
 .newsTitle {
-    max-height: 100px;
-    min-height: 100px;
+    /* max-height: 100px; */
+    /* min-height: 100px; */
     overflow: clip;
     text-overflow: ellipsis;
 }
 
 .newsDescription {
-    max-height: 100px;
-    min-height: 100px;
+    /* max-height: 100px; */
+    /* min-height: 100px; */
     overflow: clip;
     text-overflow: ellipsis;
 }
@@ -101,18 +106,24 @@ body {
     scrollbar-width: none;
 }
 
-.newsAuthor {
+/* .newsAuthor {
     max-height: 20px;
     min-height: 40px;
+} */
+.row-container{
+    row-gap: 3px;
 }
 
 .btn {
     background-color: #0e292f;
+    background-color: red;
     color: white;
+    /* border-radius: 5px; */
 }
 
 .btn:hover {
     background-color: #00d7c3;
+    background-color: #bfd0ff;
     color: black;
 
 }
@@ -172,37 +183,54 @@ body {
     bottom: 0;
     padding: 5px;
 }
+/* .container-fluid{
+    align-items: flex-end;
+}*/
+.container-fluid img{
+    height:55px
+}
 
 /* ****************************************Light mode**************************************** */
 .lightMode .news-body {
     background: #9ac5cc;
-    color: #002b33;
+    background: #ffffffe4;
+    /* background: rgb(239, 230, 223); */
+    color: black;
 }
 
 .lightMode .bg-dark {
-    background-color: #2f9bae;
+    /* background: #d8d8da; */
     color: black;
 }
 
 .lightMode .newsbox {
     background: #b0e0e6;
+    background: #f8f9fa;
+    /* background: #d8d8da; */
+
     color: black;
 }
 
 .lightMode .newsbox:hover {
     color: black;
-    background-color: #90ced7;
-    box-shadow: 0 0 10px 0 #95e4dc inset, 0 0 10px 2px #95e4dc;
-    border: 3px solid #95e4dc;
+    transform: translateY(-5px);
+    transition: 0.7s;
+    /* color: white; */
+    /* background-color: black; */
+    box-shadow:  5px 7px 7px 0px #0000003f;
+    /* background-color: #90ced7; */
+    /* box-shadow: 0 0 10px 0 #000000 inset, 0 0 10px 2px #000000; */
+    /* border: 3px solid #95e4dc; */
 }
 
 .lightMode .btn {
-    background-color: #00d7c3;
+    background-color: lightcoral;
     color: black;
 }
 
 .lightMode .btn:hover {
     background-color: #0a6157;
+    background-color: #5e6a75;
     color: white;
 }
 
@@ -212,7 +240,7 @@ body {
         flex-direction: row-reverse;
     } */
     .news-container {
-        margin-top:150px;
+        margin-top:190px;
     }
     
 .toggleMode{
@@ -257,6 +285,11 @@ body {
     .source, .readMore{
         font-size:30px
     }
+    .newsbox {
+        overflow: auto;
+        height: 1150px;
+        margin-bottom: 60px;
+    }
     .nav-item{
         font-size:50px;
         margin:10px 30px;
@@ -288,6 +321,7 @@ body {
 
     .newsbox {
         overflow: auto;
+        height: fit-content;
         min-height: fit-content;
         max-height: fit-content;
     }
@@ -319,6 +353,12 @@ body {
         min-height: fit-content;
         max-height: fit-content;
     }
+    .container-fluid img{
+        height:52px
+    }
+    /* .container-fluid{ */
+        /* align-items: flex-start; */
+    /* } */
 }
 
 @media screen and (max-width:420px) {
@@ -327,6 +367,7 @@ body {
         /* margin-right:4vw;
             margin-left:calc(4vw - 12px); */
     }
+
 }
 
 @media screen and (max-width:281px) {

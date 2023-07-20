@@ -37,13 +37,15 @@ const NavBar = () => {
       <nav
         className={`navbar fixed-top navbar-expand-lg navbar-${mode} bg-${mode}`}
       >
-        <div className="container-fluid">
-          <Link className="navbar-brand text-bold mx-2 my-0" to="/">
-            <img src={NewsPanda} height="40px" />
+        <div className="container-fluid align-items-end ">
+          <Link className="navbar-brand text-bold mx-2 my-0 d-flex " to="/">
+            <img src={NewsPanda} />
           </Link>
-            <h2 className="mx-2 "><b>NewsPanda</b></h2>
+          {/* <Link className="navbar-brand text-bold mx-2 my-0 d-flex align-items-end" to="/"> */}
+            <h2 className="mx-2 align-items-end"><b>NewsPanda</b></h2>
+          {/* </Link> */}
           <button
-            className="navbar-toggler "
+            className="navbar-toggler  text-bold mx-2 my-0"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarSupportedContent"
